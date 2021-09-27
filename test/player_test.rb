@@ -14,4 +14,10 @@ class PlayerTest < TestCase
     player = Player.new(name: expected, location: 0)
     assert_equal(expected, player.name, "Name should be: #{expected}")
   end
+
+  def test_player_moved_to_new_location
+    expected = 1
+    player = Player.new(name: "", location: 0).move(location: expected)
+    assert_equal(expected, player.location, "Location should be: #{expected}")
+  end
 end
