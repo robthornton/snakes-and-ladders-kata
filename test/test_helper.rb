@@ -6,6 +6,6 @@ require 'minitest/reporters'
 REPORTERS_OPTIONS = { color: true }
 Minitest::Reporters.use!(Minitest::Reporters::DefaultReporter.new(REPORTERS_OPTIONS))
 
-require 'game'
+require 'snakes_ladders'
 
 class TestCase < Minitest::Test; end
