@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 
-require 'transition'
+require 'board'
 require 'player'
+require 'transition'
