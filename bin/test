@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+ROOT = Dir.pwd
+
+unless File.join(ROOT, 'bin/test') == File.expand_path(__FILE__)
+  puts 'Test command must be run from the project root'
+  return
+end
+
+$LOAD_PATH.unshift(File.join(ROOT, 'src'))
+$LOAD_PATH.unshift(File.join(ROOT, 'test'))
+
+if ARGV.empty?
+  TEST_FILES = Dir['test/**/*_test.rb']
+else
+  TEST_FILES = ARGV
+end
+
+COMMAND = "ruby -I src:test #{TEST_FILES.join(' ')}"
+
+puts "Running: #{COMMAND}"
+system(COMMAND)
