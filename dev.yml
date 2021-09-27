@@ -10,4 +10,4 @@ commands:
   run:
     run: bin/run
   test:
-    run: bin/testunit
+    run: bin/test
